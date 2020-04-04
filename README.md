@@ -7,11 +7,15 @@
 * Link social media
 * Add photos
 * Create News feed content
-* Write up a Jam-with-us page (possibly with form entry for applying?)
+* Update the Job Posting link or remove it [Jam with Us]
 
-## Proposals
+## Meeting Input
 
-* Form entry with resume upload on jam-with-us page
-* Rename it from HII? Define the focus solidly
-* Let's copy in some write-ups from previous projects to really populate the site, get people excited, show off what we have
-* Place to link instructables?
+* Do we have a new job posting to reference? (todo items)
+* Update the talent.pdf poster?
+* What do we want in the footer?
+* What info would we like to gather in a contact form?
+* How would we like to go about populating the projects pages?
+* What information do we want to put out publicly vs what do we want to keep close to our chest for CoVis development?
+* Do we want to modify the front page to include any reference of news or project? If so how would we like to integrate that?
+* Coming back around to thoughts on markdown content creation and Jekyll?
