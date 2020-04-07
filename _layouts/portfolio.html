@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{%- include header.html -%}
+{%- include banner_static.html title=page.title -%}
+<!-- Main -->
+<section id="main" class="wrapper">
+	<div class="inner">
+		<div class="content">
+			<header>
+				<h2>Current Projects</h2>
+			</header>
+			{%- assign _projects = site.projects | sort: 'date' | reverse -%}
+			<!-- Projects Loop-->
+			{% for _project in _projects %}
+				{% if _project.active == true %}
+				<a class='tile' href='{{- _project.url | absolute_url -}}'>
+					<div class='tile-img-wrapper'><img class='tile-img' src='../assets/project_images/{{ _project.image }}'/></div>
+					<h3 class='tile-title'>{{ _project.title }}</h3>
+					<p>{{ _project.subtitle }}</p>
+				</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	<section id="main" class="wrapper not-first-wrapper">
+		<div class="inner">
+			<div class="content">
+				<header>
+					<h2>Past Projects</h2>
+				</header>
+				<!-- Past Projects Loop-->
+				{% for _project in _projects %}
+					{% if _project.active != true %}
+					<a class='tile' href='{{- _project.url | absolute_url -}}'>
+						<div class='tile-img-wrapper'><img class='tile-img' src='../assets/project_images/{{ _project.image }}'/></div>
+						<h3 class='tile-title'>{{ _project.title }}</h3>
+						<p>{{ _project.description }}</p>
+					</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+</section>
