@@ -15,7 +15,7 @@ The following steps are for creating a new project post, which will add the proj
 	image: The preview image for your project
 	layout: project # Don't touch this
 	active: true # true if your project is in progress, false when it is over
-	---
+	\-\-\-
 3. After the separating line that defines the *variable headers*, you may write your content including whatever you would like!
 
 The content can be written in *either* markdown or html, but must follow the same headline.
