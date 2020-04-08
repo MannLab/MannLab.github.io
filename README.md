@@ -8,13 +8,13 @@ The following steps are for creating a new project post, which will add the proj
 
 1. In the Github directory under `/_projects/`, create a new file using the naming scheme `YYYY-MM-DD-TITLE.md` with Y, M, D being year, month and day respectively
 2. In the file, begin by adding the *variable headers* **exactly** as seen below:
-  	> \-\-\-
-	title: The title of your project
-	subtitle: A subtitle or short description of your project (shorter is better)
-	author: Your Name
-	image: The preview image for your project
-	layout: project # Don't touch this
-	active: true # true if your project is in progress, false when it is over
+  	> \-\-\- <br>
+	title: The title of your project <br>
+	subtitle: A subtitle or short description of your project (shorter is better)<br>
+	author: Your Name<br>
+	image: The preview image for your project <br>
+	layout: project # Don't touch this <br>
+	active: true # true if your project is in progress, false when it is over<br>
 	\-\-\-
 3. After the separating line that defines the *variable headers*, you may write your content including whatever you would like!
 
