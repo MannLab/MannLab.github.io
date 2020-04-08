@@ -30,7 +30,9 @@ When placing an image in the body of the article, use the full path of the image
 
 ## Editing an Existing Project Post
 
-To edit an existing 
+To edit an existing post, simply go into `/_projects/` and select the file you'd like to edit. Then add the content you'd like and commit your changes.
+
+**Note**: If updating a project that has already been marked completed, please make a note \[UPDATE YY/MM/YY] to denote that an update was made at a later date.
 
 ## Adding a News Post
 
