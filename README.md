@@ -1,4 +1,4 @@
-# The MannLab Site
+# MannLab
 
 This site is the source of information on the Humanistic Intelligence Initiative. This is also the place for news and project information on things developed in MannLab. They are documented and recorded here. If you have anything to contribute, please contact MannLab to be added to the repository and allowed to push changes!
 
