@@ -4,4 +4,5 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: showcase_browse
 title: Showcase
+permalink: /showcase
 ---
