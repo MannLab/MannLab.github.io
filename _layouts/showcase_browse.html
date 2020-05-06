@@ -2,7 +2,7 @@
 layout: default
 ---  
 
-{%- include nav.html section="home" -%}
+{%- include nav.html section="showcase" -%}
 
 <div class="hero-wrap" style="background-image: url('assets/images/bc_motor.gif'); background-attachment:fixed;">
 <div class="overlay"></div>
@@ -18,97 +18,164 @@ layout: default
 
 <section class="ftco-section bg-light">
 <div class="container">
-<div class="row justify-content-center mb-5 pb-3">
-    <div class="col-md-7 heading-section ftco-animate text-center">
-    <h2 class="mb-4">Our Inventions</h2>
+    <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">Featured Inventions</h2>
+        </div>
     </div>
-</div>
-<div class="row d-flex">
-	<!-- Posts List -->
-    {%- for _project in _projects -%}
-        {%- for prop in _project -%}
-            {{- prop -}}, 
+    <div class="row d-flex">
+        <!-- Posts List -->
+        {%- for _project in site.projects -%}
+            {%- if _project.status == "featured" -%}
+            {%- capture _title -%}
+                <a href="{{- _project.url | absolute_url -}}">{{- _project.title -}}</a>
+            {%- endcapture -%}
+            {%- capture _subtitle -%}
+                <div>{{- _project.date | date_to_long_string -}}</div>
+                <div>{% if _project.author -%} {{- _project.author }} {% endif %}</div>
+                <!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
+            {%- endcapture -%}
+            {%- capture _image -%}
+                <a href="{{- _project.url | absolute_url -}}" class="block-20 order-md-last" style="background-image: url('assets/user_images/{{- _project.image -}}');"></a>
+            {%- endcapture -%}
+            {%- capture _excerpt -%}<p>{{- _project.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+            {%- capture _link -%}<a href="{{- _project.url | absolute_url -}}">read more</a>{%- endcapture -%}
+            {%- assign _content = _excerpt | append: _link -%}
+            {%- include project_block.html title=_title subtitle=_subtitle content=_content photo=_image -%}
+            {%- endif -%}
         {%- endfor -%}
-        
-	{%- endfor -%}
-    
-    <!-- <div class="col-md-6 ftco-animate">
-    <div class="blog-entry align-self-stretch d-flex">
-        <a href="blog-single.html" class="block-20 order-md-last" style="background-image: url('images/image_2.jpg');">
-        </a>
-        <div class="text p-4 d-block">
-        <div class="meta mb-3">
-            <div><a href="#">August 12, 2018</a></div>
-            <div><a href="#">Admin</a></div>
-            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-        </div>
-        <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    </div>
+    <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">On-going Projects</h2>
         </div>
     </div>
+    <div class="row d-flex">
+        <!-- Posts List -->
+        {%- for _project in site.projects -%}
+            {%- if _project.status == "ongoing" -%}
+            {%- capture _title -%}
+                <a href="{{- _project.url | absolute_url -}}">{{- _project.title -}}</a>
+            {%- endcapture -%}
+            {%- capture _subtitle -%}
+                <div>{{- _project.date | date_to_long_string -}}</div>
+                <div>{% if _project.author -%} {{- _project.author }} {% endif %}</div>
+                <!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
+            {%- endcapture -%}
+            {%- capture _image -%}
+                <a href="{{- _project.url | absolute_url -}}" class="block-20 order-md-last" style="background-image: url('assets/user_images/{{- _project.image -}}');"></a>
+            {%- endcapture -%}
+            {%- capture _excerpt -%}<p>{{- _project.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+            {%- capture _link -%}<a href="{{- _project.url | absolute_url -}}">read more</a>{%- endcapture -%}
+            {%- assign _content = _excerpt | append: _link -%}
+            {%- include project_block.html title=_title subtitle=_subtitle content=_content photo=_image -%}
+            {%- endif -%}
+        {%- endfor -%}
     </div>
-    <div class="col-md-6 ftco-animate">
-    <div class="blog-entry align-self-stretch d-flex">
-        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-        </a>
-        <div class="text p-4 d-block">
-        <div class="meta mb-3">
-            <div><a href="#">August 12, 2018</a></div>
-            <div><a href="#">Admin</a></div>
-            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-        </div>
-        <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-        </div>
-    </div>
-    </div>
-    <div class="col-md-6 ftco-animate">
-    <div class="blog-entry align-self-stretch d-flex">
-        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
-        </a>
-        <div class="text p-4 d-block">
-        <div class="meta mb-3">
-            <div><a href="#">August 12, 2018</a></div>
-            <div><a href="#">Admin</a></div>
-            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-        </div>
-        <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">Past Projects</h2>
         </div>
     </div>
+    <div class="row d-flex">
+        <!-- Posts List -->
+        {%- for _project in site.projects -%}
+            {%- if _project.status == "complete" -%}
+            {%- capture _title -%}
+                <a href="{{- _project.url | absolute_url -}}">{{- _project.title -}}</a>
+            {%- endcapture -%}
+            {%- capture _subtitle -%}
+                <div>{{- _project.date | date_to_long_string -}}</div>
+                <div>{% if _project.author -%} {{- _project.author }} {% endif %}</div>
+                <!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
+            {%- endcapture -%}
+            {%- capture _image -%}
+                <a href="{{- _project.url | absolute_url -}}" class="block-20 order-md-last" style="background-image: url('assets/user_images/{{- _project.image -}}');"></a>
+            {%- endcapture -%}
+            {%- capture _excerpt -%}<p>{{- _project.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+            {%- capture _link -%}<a href="{{- _project.url | absolute_url -}}">read more</a>{%- endcapture -%}
+            {%- assign _content = _excerpt | append: _link -%}
+            {%- include project_block.html title=_title subtitle=_subtitle content=_content photo=_image -%}
+            {%- endif -%}
+        {%- endfor -%}
     </div>
-    <div class="col-md-6 ftco-animate">
-    <div class="blog-entry align-self-stretch d-flex">
-        <a href="blog-single.html" class="block-20 order-md-last" style="background-image: url('images/image_5.jpg');">
-        </a>
-        <div class="text p-4 d-block">
-        <div class="meta mb-3">
-            <div><a href="#">August 12, 2018</a></div>
-            <div><a href="#">Admin</a></div>
-            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+        <!-- <div class="col-md-6 ftco-animate">
+        <div class="blog-entry align-self-stretch d-flex">
+            <a href="blog-single.html" class="block-20 order-md-last" style="background-image: url('images/image_2.jpg');">
+            </a>
+            <div class="text p-4 d-block">
+            <div class="meta mb-3">
+                <div><a href="#">August 12, 2018</a></div>
+                <div><a href="#">Admin</a></div>
+                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
+            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
         </div>
-        <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
         </div>
-    </div>
-    </div>
-    <div class="col-md-6 ftco-animate">
-    <div class="blog-entry align-self-stretch d-flex">
-        <a href="blog-single.html" class="block-20 order-md-last" style="background-image: url('images/image_6.jpg');">
-        </a>
-        <div class="text p-4 d-block">
-        <div class="meta mb-3">
-            <div><a href="#">August 12, 2018</a></div>
-            <div><a href="#">Admin</a></div>
-            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+        <div class="col-md-6 ftco-animate">
+        <div class="blog-entry align-self-stretch d-flex">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+            </a>
+            <div class="text p-4 d-block">
+            <div class="meta mb-3">
+                <div><a href="#">August 12, 2018</a></div>
+                <div><a href="#">Admin</a></div>
+                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
+            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
         </div>
-        <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
         </div>
-    </div>
-    </div> -->
-</div>
-<div class="row mt-5">
+        <div class="col-md-6 ftco-animate">
+        <div class="blog-entry align-self-stretch d-flex">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+            </a>
+            <div class="text p-4 d-block">
+            <div class="meta mb-3">
+                <div><a href="#">August 12, 2018</a></div>
+                <div><a href="#">Admin</a></div>
+                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
+            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-6 ftco-animate">
+        <div class="blog-entry align-self-stretch d-flex">
+            <a href="blog-single.html" class="block-20 order-md-last" style="background-image: url('images/image_5.jpg');">
+            </a>
+            <div class="text p-4 d-block">
+            <div class="meta mb-3">
+                <div><a href="#">August 12, 2018</a></div>
+                <div><a href="#">Admin</a></div>
+                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
+            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-6 ftco-animate">
+        <div class="blog-entry align-self-stretch d-flex">
+            <a href="blog-single.html" class="block-20 order-md-last" style="background-image: url('images/image_6.jpg');">
+            </a>
+            <div class="text p-4 d-block">
+            <div class="meta mb-3">
+                <div><a href="#">August 12, 2018</a></div>
+                <div><a href="#">Admin</a></div>
+                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
+            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+        </div>
+        </div> -->
+<!-- PAGINATOR -->
+<!-- <div class="row mt-5">
     <div class="col text-center">
     <div class="block-27">
         <ul>
@@ -122,7 +189,7 @@ layout: default
         </ul>
     </div>
     </div>
-</div>
+</div> -->
 </div>
 </section>
 

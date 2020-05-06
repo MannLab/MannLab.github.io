@@ -1,0 +1,24 @@
+---
+layout: default
+---  
+
+{%- include nav.html section="people" -%}
+
+<div class="hero-wrap" style="background-image: url('assets/images/eyetap_grp.jpg'); background-attachment:fixed;">
+    <div class="overlay"></div>
+        <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-8 ftco-animate text-center">
+            <p class="breadcrumbs"><span class="mr-2"><a href="/showcase">Showcase</a></span> <span>{{- page.title -}}</span></p>
+            <h1 class="mb-3 bread">{{- page.title -}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class='container'>
+        {{- page.content -}}
+    </div>
+    
+</section>
