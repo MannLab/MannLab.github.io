@@ -25,20 +25,11 @@ layout: default
 </div>
 <div class="row d-flex">
 	<!-- Posts List -->
-	{%- for _project in _projects -%}
-        {% if _project.status == "ongoing" %}
-		{%- capture _title -%}
-			<a href="{{- _project.url | absolute_url -}}">{{- _project.title -}}</a>
-		{%- endcapture -%}
-		{%- capture _subtitle -%}
-            
-            <div>{% if _project.author -%} {{- _project.author }} | {% endif %}</div>
-            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-		{%- endcapture -%}
-		{%- capture _excerpt -%}<p>{{- _project.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
-		{%- capture _link -%}<a href="{{- _project.url | absolute_url -}}">read more</a>{%- endcapture -%}
-		{%- assign _content = _excerpt | append: _link -%}
-		{%- include project_block.html title=_title subtitle=_subtitle content=_content image=_project.image -%}
+    {%- for _project in _projects -%}
+        {%- for prop in _project -%}
+            {{- prop -}}, 
+        {%- endfor -%}
+        
 	{%- endfor -%}
     
     <!-- <div class="col-md-6 ftco-animate">
