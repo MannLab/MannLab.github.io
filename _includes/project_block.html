@@ -1,0 +1,24 @@
+{%- comment -%}
+  Include vars:
+	title
+    subtitle
+	photo
+	auto-header
+	content
+{%- endcomment -%}
+
+{%- assign _title = include.title | default: 'Untitled' -%}
+{%- assign _slug = include.title | strip_html | slugify | default: 'untitled' -%}
+
+<div class="col-md-6 ftco-animate">
+    <div class="blog-entry align-self-stretch d-flex">
+        <a href="" class="block-20 order-md-last" style="background-image: url('{{- include.photo | relative_url -}}');"></a>
+        <div class="text p-4 d-block">
+            <div class="meta mb-3">
+                {{- include.subtitle -}}
+            </div>
+            <h3 class="heading mt-3">{{- include.title -}}</h3>
+            {{- include.content -}}
+        </div>
+    </div>
+</div>
