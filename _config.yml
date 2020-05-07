@@ -40,10 +40,10 @@ url: "" # the base hostname & protocol for your site
 
 # Social settings
 # Make sure to include the full url including protocol, e.g. https://github.com/AdamCarnaffan
-twitter_url:
-facebook_url: 
-googleplus_url:
-instagram_url: 
+twitter_url: https://twitter.com/MannLabCanada
+facebook_url: https://www.facebook.com/MannLab-Canada-109731224029848/
+googleplus_url: 
+instagram_url: https://www.instagram.com/mannlabcanada/
 linkedin_url: 
 github_url: 
 stackoverflow_url:
