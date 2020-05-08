@@ -1,0 +1,20 @@
+{%- comment -%}
+Include vars:
+  title
+  meta
+  excerpt
+  photo
+{%- endcomment -%}
+
+<div class="col-md-12 ftco-animate">
+    <div class="blog-entry align-self-stretch d-flex">
+        {{- include.photo -}}
+        <div class="text p-4 d-block">
+            <div class="meta mb-3">
+                {{- include.meta -}}
+            </div>
+            <h3 class="heading mt-3">{{- include.title -}}</h3>
+            {{- include.excerpt -}}
+        </div>
+    </div>
+</div>

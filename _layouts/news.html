@@ -1,0 +1,80 @@
+---
+layout: default
+---  
+
+{%- include nav.html section="news" -%}
+
+<div class="hero-wrap-cut" style="background-image: url({{- 'assets/images/bc_motor.gif' | absolute_url -}}); background-attachment:fixed;">
+<div class="overlay"></div>
+<div class="container">
+<div class="row no-gutters slider-text-cut align-items-center justify-content-center" data-scrollax-parent="true">
+    <div class="col-md-8 ftco-animate text-center">
+    <p class="breadcrumbs"><span class="mr-2"><a href="{{ '/home' | absolute_url }}">Home</a></span> <span>News</span></p>
+    <h1 class="mb-3 bread">News</h1>
+    </div>
+</div>
+</div>
+</div>
+
+<section class="ftco-section bg-light">
+<div class="container">
+    <div class="row d-flex">
+        <!-- Posts List -->
+        {%- for _article in site.news -%}
+            {%- capture _title -%}
+                <a href="{{- _article.url | absolute_url -}}">{{- _article.title -}}</a>
+            {%- endcapture -%}
+            {%- capture _subtitle -%}
+                <div>{{- _article.date | date_to_long_string -}}</div>
+                <div>{% if _article.author -%} {{- _article.author }} {% endif %}</div>
+                <!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
+            {%- endcapture -%}
+            {%- capture _image -%}
+                <a href="{{- _article.url | absolute_url -}}" class="block-20 order-md-last" style="background-image: url('{{- '/assets/user_images/' | append: _article.image | absolute_url -}}');"></a>
+            {%- endcapture -%}
+            {%- capture _excerpt -%}<p>{{- _article.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+            {%- capture _link -%}<a href="{{- _article.url | absolute_url -}}">read more</a>{%- endcapture -%}
+            {%- assign _content = _excerpt | append: _link -%}
+            {%- include article_block.html title=_title meta=_subtitle excerpt=_content photo=_image -%}
+        {%- endfor -%}
+    </div>
+</div>
+</section>
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAppointment" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="modalAppointmentLabel">Make With Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form action="#">
+        <div class="form-group">
+            <label for="appointment_name" class="text-black">Full Name</label>
+            <input type="text" class="form-control" id="appointment_name">
+        </div>
+        <div class="form-group">
+            <label for="appointment_email" class="text-black">Email</label>
+            <input type="text" class="form-control" id="appointment_email">
+        </div>
+            
+        <div class="form-group">
+            <label for="appointment_message" class="text-black">Message</label>
+            <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Send Message" class="btn btn-primary">
+        </div>
+        </form>
+    </div>
+    
+    </div>
+</div>
+</div>
