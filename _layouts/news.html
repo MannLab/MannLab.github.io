@@ -4,7 +4,7 @@ layout: default
 
 {%- include nav.html section="news" -%}
 
-<div class="hero-wrap-cut" style="background-image: url({{- 'assets/images/bc_motor.gif' | absolute_url -}}); background-attachment:fixed;">
+<div class="hero-wrap-cut" style="background-image: url(); background-attachment:fixed;">
 <div class="overlay"></div>
 <div class="container">
 <div class="row no-gutters slider-text-cut align-items-center justify-content-center" data-scrollax-parent="true">
@@ -20,7 +20,8 @@ layout: default
 <div class="container">
     <div class="row d-flex">
         <!-- Posts List -->
-        {%- for _article in site.news -%}
+        {%- assign _news = (site.news | sort: 'date') -%}
+        {%- for _article in _news -%}
             {%- capture _title -%}
                 <a href="{{- _article.url | absolute_url -}}">{{- _article.title -}}</a>
             {%- endcapture -%}

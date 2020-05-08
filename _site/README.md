@@ -6,19 +6,12 @@ This site is the source of information on the Humanistic Intelligence Initiative
 
 The following steps are for creating a new project post, which will add the project to the Projects directory of the website
 
-1. In the Github directory under `/_projects/`, create a new file using the naming scheme `YYYY-MM-DD-TITLE.md` with Y, M, D being year, month and day respectively
-2. In the file, begin by adding the *variable headers* **exactly** as seen below:
-  	> \-\-\- <br>
-	title: The title of your project <br>
-	subtitle: A subtitle or short description of your project (shorter is better)<br>
-	author: Your Name<br>
-	image: The preview image for your project <br>
-	layout: project # Don't touch this <br>
-	active: true # true if your project is in progress, false when it is over<br>
-	\-\-\-
+1. In the Github directory under `/_projects/`, paste the `project_template.md` file from the `/_hide_templates/` folder.
+2. In the file, begin by adding the *variable headers* **exactly** using the format in the template.
 3. After the separating line that defines the *variable headers*, you may write your content including whatever you would like!
 
 The content can be written in *either* markdown or html, but must follow the same headline.
+All of this information is available in the sample document.
 
 ### Adding images
 
@@ -28,20 +21,29 @@ When placing an image in the *variable headers*, use only the name of the image 
 
 When placing an image in the body of the article, use the full path of the image (ie. `/assets/project_images/swimulator.png`).
 
-## Editing an Existing Project Post
+## Editing an Existing Document
 
-To edit an existing post, simply go into `/_projects/` and select the file you'd like to edit. Then add the content you'd like and commit your changes.
+To edit an existing post, person or news article, simply go into the directory you originally copied the file to and select the file you'd like to edit. Then add the content you'd like and commit your changes.
 
-**Note**: If updating a project that has already been marked completed, please make a note in the form \[UPDATE YY/MM/YY] at the beginning of your edit to denote that an update was made at a later date.
+**Note**: If updating a project or news article, please make a note in the form \[UPDATE YY/MM/YY] at the beginning of your edit to denote that an update was made at a later date.
 
 ## Adding a News Post
 
-This feature is coming soon...
+In much the same way that Projects are added, we follow the steps below for the News directory of the website.
 
-## Still to be Done
+1. In the Github directory under `/_news/`, paste the `news_template.md` file from the `/_hide_templates/` folder.
+2. In the file, begin by adding the *variable headers* **exactly** using the format in the template.
+3. After the separating line that defines the *variable headers*, you may write your content including whatever you would like!
 
-* Add Social Media Handles
-* Add News directories
-* Produce some Project content
-* Add the form to the Jam page
-* Add defaults for project variables
+The content can be written in *either* markdown or html, but must follow the same headline.
+All of this information is available in the sample document.
+
+## Adding a Person
+
+Adding a person is much the same as adding to the News or Projects directories, though less content is required.
+
+1. In the Github directory under `/_people/`, paste the `people_template.md` file from the `/_hide_templates/` folder.
+2. In the file, begin by adding the *variable headers* **exactly** using the format in the template.
+3. After the separating line that defines the *variable headers*, please include a quote from the person being listed! The quote should be written in plain text.
+
+All of this information is available in the sample document.
