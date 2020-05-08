@@ -49,3 +49,5 @@ When placing an image in the body of the article, use the full path of the image
 To edit an existing post, person or news article, simply go into the directory you originally copied the file to and select the file you'd like to edit. Then add the content you'd like and commit your changes.
 
 **Note**: If updating a project or news article, please make a note in the form \[UPDATE YY/MM/YY] at the beginning of your edit to denote that an update was made at a later date.
+
+> Remember to include a meaningful commit message when adding to the site! It really helps with back-tracing if something goes wrong.
