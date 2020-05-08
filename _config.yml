@@ -51,13 +51,20 @@ pinterest_url:
 slack_url:
 dribbble_url:
 
+# Pagination
+# plugins: [jekyll-paginate]
+# paginate: 8
+# paginate-path: /news/page:num/
+
 # Google Analytics Tracking ID goes here:
 google_analytics:
 
 collections:
   projects:
     output: true
-    active: true
   
   news:
+    output: true
+  
+  people:
     output: true
