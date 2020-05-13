@@ -75,11 +75,12 @@ The team will first start by organizing brainstorming sessions where Subject Mat
 Faculty share their current research, and opportunities that can be applied to humanistic technologies. The results
 of the conversations will lead to a series of related collaboration, training, and teaching programs, including:
 
-<table><tr>
-<td>* Hackathons</td><td>Symposia and conferences</td><td>Training</td>
-</tr><tr>
-<td>Workshops</td><td>Seminars/Speaker Series</td><td>Standards organizations</td>
-</tr></table>
+* Hackathons
+* Symposia & conferences
+* Training
+* Workshops
+* Seminars/Speaker Series
+* Standards Organizations
 
 ## 2. Invention-Entrepreneurship (Inventrepreneurship) Nexus for Health, Well-Being, and Personal Technology:
 Healthcare is undergoing a transformation from centralized monolithic databases to distributed healthcare.
