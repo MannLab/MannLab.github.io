@@ -17,8 +17,8 @@ layout: default
 </div>
 
 <section class="ftco-section">
-    <div class='container'>
-        {{- page.content -}}
+    <div class='container' markdown="1">
+        {{ page.content | markdownify }}
     </div>
     
 </section>

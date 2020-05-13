@@ -51,6 +51,10 @@ pinterest_url:
 slack_url:
 dribbble_url:
 
+markdown: kramdown
+kramdown:  
+  parse_block_html: true
+
 # Pagination
 # plugins: [jekyll-paginate]
 # paginate: 8
