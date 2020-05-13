@@ -176,7 +176,7 @@ layout: default
         {%- for _person in _people -%}
             {%- if _person.active == true -%}
                 {%- assign _image = '/assets/personnel_images/' | append: _person.image | absolute_url -%}
-                {%- include people_block.html name=_person.name title=_person.title photo=_image quote=_person.content -%}
+                {%- include people_block.html name=_person.name title=_person.title photo=_image bio=_person.content -%}
             {%- endif -%}
         {%- endfor -%}
     </div>

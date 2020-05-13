@@ -3,7 +3,7 @@ Include vars:
   name
   title
   photo
-  quote
+  bio
 {%- endcomment -%}
 
 <div class="col-md-6 col-lg-3 ftco-animate">
@@ -18,7 +18,7 @@ Include vars:
             <div class="back">
                 <!-- back content -->
                 <blockquote>
-                <p>&ldquo;{{- include.quote | strip_html | strip -}}&rdquo;</p>
+                <p class='bio-text'>{{- include.bio | strip_html | strip | truncate: 300 -}}</p>
                 </blockquote>
                 <div class="author d-flex">
                 <div class="image mr-3 align-self-center">
