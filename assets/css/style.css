@@ -7312,9 +7312,9 @@ h1, h2, h3, h4, h5,
       top: 0; } }
   .ftco-navbar-light .navbar-brand {
     color: #fff; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .ftco-navbar-light .navbar-brand {
-        color: #39345a; } }
+        color: #39345a; }  }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     font-size: 16px;
     padding-top: .9rem;
@@ -7503,6 +7503,15 @@ h1, h2, h3, h4, h5,
 
 .logo-size {
   width: 1.75rem;
+  height: 1.75rem;
+  display: inline-block;
+  background-image: url('/assets/images/MannLab_logo_b_clean.png');
+  background-size: cover;
+}
+@media(max-width: 992px) {
+  .navbar-dark:not(.awake) > .container > .navbar-brand > .logo-size {
+    background-image: url('/assets/images/MannLab_logo_w_clean.png');
+  }
 }
 
 .hero-wrap-cut {
