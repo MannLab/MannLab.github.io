@@ -20,7 +20,7 @@ layout: default
 <div class="container">
     <div class="row d-flex">
         <!-- Posts List -->
-        {%- assign _news = site.news | sort: 'date' -%}
+        {%- assign _news = site.news | sort: 'date' | reverse -%}
         {%- for _article in _news -%}
             {%- capture _title -%}
                 <a href="{{- _article.url | absolute_url -}}">{{- _article.title -}}</a>

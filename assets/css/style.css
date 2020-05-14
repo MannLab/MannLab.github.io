@@ -3277,6 +3277,9 @@ input[type="button"].btn-block {
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
+  .navbar-brand > * {
+    vertical-align: middle;
+  }
 
 .navbar-nav {
   display: -webkit-box;
@@ -7472,7 +7475,7 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .4;
+    opacity: 0.7;
     background: #167ce9;
     background: -moz-linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
     background: -webkit-gradient(left bottom, right top, color-stop(0%, #167ce9), color-stop(100%, #79efb4));
@@ -7481,6 +7484,26 @@ h1, h2, h3, h4, h5,
     background: -ms-linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
     background: linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#167ce9', endColorstr='#79efb4', GradientType=1 ); }
+  .hero-wrap .overlay-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0;
+    background: #167ce9;
+    background: -moz-linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #167ce9), color-stop(100%, #79efb4));
+    background: -webkit-linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
+    background: -o-linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
+    background: -ms-linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
+    background: linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#167ce9', endColorstr='#79efb4', GradientType=1 ); }
+
+.logo-size {
+  width: 1.75rem;
+}
 
 .hero-wrap-cut {
   width: 100%;
@@ -7493,7 +7516,7 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .4;
+    opacity: 0.7;
     background: #167ce9;
     background: -moz-linear-gradient(45deg, #167ce9 0%, #79efb4 100%);
     background: -webkit-gradient(left bottom, right top, color-stop(0%, #167ce9), color-stop(100%, #79efb4));
