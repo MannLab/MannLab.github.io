@@ -9,8 +9,8 @@ layout: default
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center">
-            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span>People</span></p>
-            <h1 class="mb-3 bread">Our People</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span>Team</span></p>
+            <h1 class="mb-3 bread">Our Team</h1>
           </div>
         </div>
       </div>
@@ -18,14 +18,36 @@ layout: default
 
     <section class="ftco-section">
     	<div class="container">
-        <div class="row">
-			{%- assign _people = site.people | sort: 'priority' -%}
+		<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section ftco-animate text-center">
+			<h2 class="mb-4">The Team</h2>
+			</div>
+		</div>
+        <div class="row d-flex">
+			{%- assign _people = site.people | sort: 'priority' | where_exp:"item", "item.title != 'Advisor'" -%}
 			{%- for _person in _people -%}
 				{%- if _person.active == true -%}
 					{%- assign _image = '/assets/personnel_images/' | append: _person.image | absolute_url -%}
 					{%- include people_block.html name=_person.name title=_person.title photo=_image bio=_person.content -%}
 				{%- endif -%}
 			{%- endfor -%}
+		</div>
+		<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section ftco-animate text-center">
+			<h2 class="mb-4">Our Advisors</h2>
+			</div>
+		</div>
+		<div class="row d-flex">
+			{%- assign _people = site.people | sort: 'priority' | where:"title", "Advisor" -%}
+
+			{%- for _person in _people -%}
+				{%- if _person.active == true -%}
+					{%- assign _image = '/assets/personnel_images/' | append: _person.image | absolute_url -%}
+					{%- include people_block.html name=_person.name title=_person.title photo=_image bio=_person.content -%}
+				{%- endif -%}
+			{%- endfor -%}
+		</div>
+
         	<!-- <div class="col-md-6 col-lg-3 ftco-animate">
 	          <div class="block-2">
 	            <div class="flipper">

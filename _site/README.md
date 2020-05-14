@@ -24,15 +24,17 @@ In much the same way that Projects are added, we follow the steps below for the 
 The content can be written in *either* markdown or html, but must follow the same headline.
 All of this information is available in the sample document.
 
-## Adding a Person
+## Adding a Team Member
 
-Adding a person is much the same as adding to the News or Projects directories, though less content is required.
+Adding a person to Team is much the same as adding to the News or Projects directories, though less content is required.
 
 1. In the Github directory under `/_people/`, paste the `people_template.md` file from the `/_hide_templates/` folder.
 2. In the file, begin by adding the *variable headers* **exactly** using the format in the template.
 3. After the separating line that defines the *variable headers*, please include a quote from the person being listed! The quote should be written in plain text.
 
 All of this information is available in the sample document.
+
+To add a person to the "Advisors" sub-group, simply make sure their title appears exactly as `Advisor`.
 
 ### Adding images
 
