@@ -172,7 +172,7 @@ layout: default
         </div>
     </div>
     <div class="row">
-        {%- assign _people = site.people | sort: 'priority' | limit: 4 -%}
+        {%- assign _people = site.people | sort: 'priority' | where_exp:"item", "item.title != 'Advisor'" | limit: 4 -%}
         {%- for _person in _people -%}
             {%- if _person.active == true -%}
                 {%- assign _image = '/assets/personnel_images/' | append: _person.image | absolute_url -%}
