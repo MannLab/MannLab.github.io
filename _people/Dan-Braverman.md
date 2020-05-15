@@ -1,5 +1,5 @@
 ---
-name: Dan-Braverman
+name: Dan Braverman
 title: Chief Operating Officer
 image: braverman.jpg
 layout: personnel

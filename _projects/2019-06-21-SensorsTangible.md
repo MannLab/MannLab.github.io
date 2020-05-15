@@ -1,5 +1,5 @@
 ---
-title: Drone Swarms for Sensing of Sensing
+title: Making Sensors Tangible with Long-exposure Photography  
 author: Steve Mann et al.
 image: streetlight.gif
 layout: project 
