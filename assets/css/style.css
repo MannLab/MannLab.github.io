@@ -7501,6 +7501,15 @@ h1, h2, h3, h4, h5,
     background: linear-gradient(45deg, #75c37b 0%, #e6569f 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75c37b', endColorstr='#e6569f', GradientType=1 ); }
 
+.hero-wrap-desc {
+    position:absolute;
+    bottom: 0;
+    width: 50%;
+    font-size: 0.75rem;
+    word-wrap: break-word;
+    text-align: center;
+}
+
 .logo-size {
   width: 1.75rem;
   height: 1.75rem;
