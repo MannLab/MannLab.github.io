@@ -330,8 +330,8 @@ layout: default
     </div>
     <div class="row d-flex">
         <!-- Posts List -->
-        {%- assign _projects = site.projects | sort: 'date' | limit: 4 -%}
-        {%- for _project in _projects -%}
+        {%- assign _projects = site.projects | sort: 'date' -%}
+        {%- for _project in _projects limit:4 -%}
             {% assign _remainder = forloop.index | minus: 1 | modulo: 4 %}
             {%- capture _title -%}
                 <h3 class="heading mt-3"><a href="{{- _project.url | absolute_url -}}">{{- _project.title -}}</a></h3>
