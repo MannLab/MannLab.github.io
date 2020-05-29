@@ -3,7 +3,7 @@ title: Virtual Reality Games in Sensory Deprivation Tanks
 author: Steve Mann et al.
 image: virtual.png
 layout: project 
-status: featured
+status: complete
 ---
 # Virtual Reality Games in Sensory Deprivation Tanks
 

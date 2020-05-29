@@ -3,7 +3,7 @@ title: Making Sensors Tangible with Long-exposure Photography
 author: Steve Mann et al.
 image: streetlight.gif
 layout: project 
-status: featured
+status: complete
 ---
 # Making Sensors Tangible with Long-exposure Photography  
 

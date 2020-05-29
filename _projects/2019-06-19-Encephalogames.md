@@ -3,7 +3,7 @@ title: Encephelogames
 author: Steve Mann et al.
 image: brain_encephalogame.png
 layout: project 
-status: featured
+status: complete
 ---
 # Encephelogames  
 <http://wearcam.org/gem2019.pdf>  
