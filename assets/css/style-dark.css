@@ -7515,12 +7515,12 @@
     width: 9.8rem;
     height: 1.5rem;
     display: inline-block;
-    background-image: url('/assets/images/MannLab_logo_color.svg');
+    background-image: url('/assets/images/mannlab_logo_color.svg');
     background-size: cover;
   }
   @media(max-width: 992px) {
     .navbar-dark:not(.awake) > .container > .navbar-brand > .logo-size {
-      background-image: url('/assets/images/MannLab_logo_color.svg');
+      background-image: url('/assets/images/mannlab_logo_color.svg');
     }
   }
   
