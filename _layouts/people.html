@@ -9,7 +9,7 @@ layout: default
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center">
-            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span>Team</span></p>
+            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span>Team</span></p> -->
             <h1 class="mb-3 bread">Our Team</h1>
           </div>
         </div>
@@ -28,7 +28,7 @@ layout: default
 			{%- for _person in _people -%}
 				{%- if _person.active == true -%}
 					{%- assign _image = '/assets/personnel_images/' | append: _person.image | absolute_url -%}
-					{%- include people_block.html name=_person.name title=_person.title photo=_image bio=_person.content -%}
+					{%- include people_block.html name=_person.name title=_person.title photo=_image bio=_person.content url=_person.url -%}
 				{%- endif -%}
 			{%- endfor -%}
 		</div>
@@ -43,7 +43,7 @@ layout: default
 			{%- for _person in _people -%}
 				{%- if _person.active == true -%}
 					{%- assign _image = '/assets/personnel_images/' | append: _person.image | absolute_url -%}
-					{%- include people_block.html name=_person.name title=_person.title photo=_image bio=_person.content -%}
+					{%- include people_block.html name=_person.name title=_person.title photo=_image bio=_person.content url=_person.url -%}
 				{%- endif -%}
 			{%- endfor -%}
 		</div>

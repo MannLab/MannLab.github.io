@@ -9,8 +9,9 @@ layout: default
         <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
             <div class="col-md-8 ftco-animate text-center">
-            <p class="breadcrumbs"><span class="mr-2"><a href="/people">people</a></span> <span>{{- page.title -}}</span></p>
-            <h1 class="mb-3 bread">{{- page.title -}}</h1>
+            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="/people">people</a></span> <span>{{- page.title -}}</span></p> -->
+            
+            <h1 class="mb-3 bread">{{- page.name -}}</h1>
             </div>
         </div>
     </div>
@@ -18,6 +19,8 @@ layout: default
 
 <section class="ftco-section">
     <div class='container'>
+        <img class='person-photo' src="{{- '/assets/personnel_images/' | append: page.image | absolute_url -}}">
+        <br>
         {{- page.content -}}
     </div>
     

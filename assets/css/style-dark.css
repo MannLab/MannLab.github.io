@@ -57,12 +57,13 @@
   body {
     margin: 0;
     font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff; }
+    background-color: #fff; 
+  }
   
   [tabindex="-1"]:focus {
     outline: 0 !important; }
@@ -7273,10 +7274,10 @@
   body {
     font-family: "Roboto", Arial, sans-serif;
     background: #181a1b;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.8;
     font-weight: 400;
-    color: #a8a399; }
+    color: #d7d1c5; }
     body.menu-show {
       overflow: hidden;
       position: fixed;
@@ -8257,7 +8258,7 @@
       right: 0;
       bottom: 0;
       content: '';
-      opacity: 0;
+      opacity: 0.8;
       background: #39345a; }
     .ftco-footer .ftco-footer-logo {
       text-transform: uppercase;
@@ -8650,6 +8651,11 @@
       text-transform: uppercase;
       letter-spacing: .1em; }
   
+  .person-photo {
+    margin:0.5rem;
+    width: 15rem;
+  }
+
   .block-2 {
     margin-bottom: 50px;
     -webkit-perspective: 1000;
@@ -8666,11 +8672,11 @@
       -o-transform: rotateY(0deg);
       -ms-transform: rotateY(0deg);
       transform: rotateY(0deg); }
-    .block-2:hover .front, .block-2.hover .front {
+    /* .block-2:hover .front, .block-2.hover .front {
       -webkit-transform: rotateY(180deg);
       -moz-transform: rotateY(180deg);
       -o-transform: rotateY(180deg);
-      transform: rotateY(180deg); }
+      transform: rotateY(180deg); } */
     .block-2, .block-2 .front, .block-2 .back {
       width: 100%;
       height: 427px; }

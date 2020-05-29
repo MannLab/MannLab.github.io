@@ -4,19 +4,18 @@ Include vars:
   title
   photo
   bio
+  url
 {%- endcomment -%}
 
-<div class="col-md-6 col-lg-3 ftco-animate">
+<div class="col-md-6 col-lg-3">
     <div class="block-2">
-        <div class="flipper">
             <div class="front" style="background-image: url('{{- include.photo -}}');">
                 <div class="box">
-                <h2>{{- include.name -}}</h2>
+                <a href='{{- include.url -}}'><h2>{{- include.name -}}</h2></a>
                 <p>{{- include.title -}}</p>
                 </div>
             </div>
-            <div class="back">
-                <!-- back content -->
+            <!-- <div class="back">
                 <blockquote>
                 <p class='bio-text'>{{- include.bio | strip_html | strip | truncate: 300 -}}</p>
                 </blockquote>
@@ -26,7 +25,6 @@ Include vars:
                 </div>
                 <div class="name align-self-center">{{- include.name -}}<span class="position">{{- include.title -}}</span></div>
                 </div>
-            </div>
-        </div>
+            </div> -->
     </div> <!-- .flip-container -->
 </div>
