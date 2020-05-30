@@ -26,6 +26,7 @@ layout: default
     <div class="row d-flex">
         <!-- Posts List -->
         {%- for _project in site.projects -%}
+        {%- if _project.status == "featured" -%}
             {%- capture _title -%}
                 <a href="{{- _project.url | absolute_url -}}">{{- _project.title -}}</a>
             {%- endcapture -%}
@@ -41,6 +42,7 @@ layout: default
             {%- capture _link -%}<a href="{{- _project.url | absolute_url -}}">read more</a>{%- endcapture -%}
             {%- assign _content = _excerpt | append: _link -%}
             {%- include project_block.html title=_title subtitle=_subtitle content=_content photo=_image -%}
+        {%- endif -%}
         {%- endfor -%}
     </div>
     <div class="row justify-content-center mb-5 pb-3">
